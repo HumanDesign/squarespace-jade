@@ -1,6 +1,6 @@
 # Squarespace-Jade-Stylus
 
-This plugin allows you to write Jade and Stylus when developing templates on the Squarespace Developers Platform. It automatically compiles and runs the css through autoprefixer.
+This plugin allows you to create templates in Jade when developing templates on the Squarespace Developers Platform.
 
 You will still need to include your compiled ```.region``` files in ```templates.conf```.
 
