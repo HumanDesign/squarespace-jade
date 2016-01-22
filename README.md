@@ -19,7 +19,7 @@ var compileJade = require('squarespace-jade');
 compileJade();
 ```
 
-To run the jade compile script open a new terminal window and enter the following.
+To run the jade compile script on file change, open a new terminal window and enter the following.
 
 ```sh
 nodemon -e jade,js
