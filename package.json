@@ -1,0 +1,27 @@
+{
+  "name": "sqs-jade",
+  "version": "1.0.0",
+  "description": "Allows for the use of Jade templates when developing on the Squarespace Developers Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HumanDesign/squarespace-jade.git"
+  },
+  "keywords": [
+    "jade",
+    "squarespace"
+  ],
+  "author": "Stephen Florian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HumanDesign/squarespace-jade/issues"
+  },
+  "homepage": "https://github.com/HumanDesign/squarespace-jade#readme",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "pretty": "^1.0.0"
+  }
+}
