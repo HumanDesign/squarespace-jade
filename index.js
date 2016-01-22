@@ -2,35 +2,33 @@ var jade = require('jade');
 var pretty = require('pretty');
 var fs = require('fs');
 
-var root = '../';
+module.exports = function() {
 
-//Check for appropriate folders
+  //Check for appropriate files and folders
 
-fs.readdir( root, function(err, files){
-  if (err) throw err;
-
-  if (!fs.existsSync(root + '/regions')){
-    fs.mkdirSync(root + '/regions');
-
-    if (!fs.existsSync(root + '/regions/src')){
-      fs.mkdirSync(root + '/regions/src');
-    }
+  if (!fs.existsSync('./index.js')){
+    fs.writeFile('./index.js');
   }
 
-});
+  if (!fs.existsSync('./regions')){
+    fs.mkdirSync('./regions');
+  }
 
-// Render Jade templates
+  // Render Jade templates
 
-fs.readdir(root + '/regions/src', function(err, files){
-  if (err) throw err;
+  fs.readdir('./regions', function(err, files){
+    if (err) throw err;
 
-  files.forEach(function(file){
-    if (file.indexOf('.jade') > -1){
+    files.forEach(function(file){
+      if (file.indexOf('.jade') > -1){
 
-      var html = jade.renderFile(root + '/regions/' + file);
-      fs.writeFile(file.replace('.jade', '.region'), pretty(html));
+        var html = jade.renderFile('./regions/' + file);
+        fs.writeFile(file.replace('.jade', '.region'), pretty(html));
 
-    }
+      }
+    });
+
   });
 
-});
+};
+
